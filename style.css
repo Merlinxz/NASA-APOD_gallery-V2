@@ -1,0 +1,192 @@
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #f8f9fa;
+    --secondary-text-color: #b1b1b1;
+    --input-background-color: #333;
+    --modal-background-color: #333;
+    --button-hover-background-color: #f8f9fa;
+    --button-hover-text-color: #333;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.display-4,
+.lead {
+    color: var(--accent-color);
+}
+
+input[type="date"],
+.btn-outline-light {
+    background: var(--input-background-color);
+    border: none;
+    padding: 0.5rem;
+    color: var(--text-color);
+    border-radius: 0.25rem;
+    margin-left: -1px;
+}
+
+.btn-outline-light {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-light:hover {
+    background: var(--button-hover-background-color);
+    color: var(--button-hover-text-color);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+/* Style for positioning the language toggle button */
+
+.language-toggle {
+    position: fixed;
+    /* Fixed position relative to the viewport */
+    top: 10px;
+    /* Distance from the top of the viewport */
+    right: 10px;
+    /* Distance from the right of the viewport */
+    z-index: 1000;
+    /* Ensures the button is above other content */
+}
+
+
+/* Optional styling to make the button more visually appealing */
+
+.language-toggle button {
+    background-color: #f8f9fa;
+    /* Light background for visibility */
+    color: #333;
+    /* Dark text color for contrast */
+    border: 1px solid #ccc;
+    /* Subtle border */
+    padding: 0.5rem 1rem;
+    /* Padding for better touch area */
+    font-size: 1rem;
+    /* Readable font size */
+    cursor: pointer;
+    /* Cursor indicates button */
+    border-radius: 5px;
+    /* Rounded corners for modern look */
+}
+
+#nasaContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#nasaContent img,
+#nasaContent iframe {
+    max-width: 60%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+#nasaContent h2,
+#nasaContent p {
+    color: var(--accent-color);
+}
+
+#nasaContent p {
+    color: var(--secondary-text-color);
+}
+
+.modal-content {
+    background-color: var(--modal-background-color);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-title {
+    color: var(--text-color);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    /* Adds spacing between buttons */
+    justify-content: center;
+    /* Centers the buttons in the group */
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--input-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    border: 3px solid var(--input-background-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-hover-text-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .display-4 {
+        font-size: 1.75rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .modal-body,
+    .modal-header,
+    .modal-footer {
+        padding: 1rem;
+    }
+    body {
+        flex-direction: column;
+    }
+    #nasaContent img,
+    #nasaContent iframe {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-4 {
+        font-size: 1.5rem;
+    }
+    .lead {
+        font-size: 0.875rem;
+    }
+}
